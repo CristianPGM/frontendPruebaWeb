@@ -1,0 +1,184 @@
+.container {
+        width: 95%;
+        width: 95%;
+        margin: 20px auto;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        padding: 10px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 10px;
+        color: #333;
+    }
+    h3 {
+        text-align: center;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .search-bar {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .search-bar input {
+        width: 60%;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        outline: none;
+        font-size: 14px;
+    }
+
+    .filter-bar {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 25px;
+    }
+
+    .filter-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8px 12px;
+        background: #f2f2f2;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        cursor: pointer;
+        font-size: 12px;
+        transition: all .2s;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+        background: #007bff;
+        color: #fff;
+        border-color: #007bff;
+    }
+
+    .products {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .product-card {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        background: #fafafa;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .product-header {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .product-desc {
+        font-size: 17px;
+        color: #0b0b0b;
+    }
+
+    .product-prices {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 8px;
+    }
+
+    .discount-box, .cash-box {
+        flex: 1;
+        text-align: center;
+        padding: 8px;
+        border-radius: 8px;
+        margin: 5px;
+    }
+
+    .discount-box {
+        background: #e8f9ee;
+        border: 1px solid #28a745;
+        color: #155724;
+    }
+
+    .cash-box {
+        background: #f0f7ff;
+        border: 1px solid #007bff;
+        color: #004085;
+    }
+
+    .discount {
+        font-weight: bold;
+        color: #28a745;
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .price-normal {
+        font-size: 12px;
+        color: #888;
+        text-decoration: line-through;
+    }
+
+    .close-btn {
+        
+        text-align: right;
+        background: #ddd;
+        border: none;
+        border-radius: 8px;
+        padding: 10px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    .close-btn:hover {
+        background: #bbb;
+    }
+
+    /* Estilo general para los botones */
+button {
+  padding: 6px 12px;
+  margin: 2px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Botón de actualizar */
+button:nth-of-type(1) {
+  background-color: #4CAF50; /* verde */
+  color: white;
+}
+
+button:nth-of-type(1):hover {
+  background-color: #45a049;
+}
+
+/* Botón de eliminar */
+button:nth-of-type(2) {
+  background-color: #f44336; /* rojo */
+  color: white;
+}
+
+button:nth-of-type(2):hover {
+  background-color: #da190b;
+}
+
+/* Opcional: cambia el cursor al pasar por la tabla */
+table tbody tr:hover {
+  background-color: #f1f1f1;
+}

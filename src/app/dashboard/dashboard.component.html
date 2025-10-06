@@ -1,0 +1,50 @@
+<div class="container">
+  <h2>PRODUCTOS OUTLET</h2>
+  <h3>Busca más productos y conoce nuestros increíbles descuentos.</h3>
+
+  <div class="search-bar">
+    <input [(ngModel)]="filtro" type="text" placeholder="Buscar productos">
+    <button class="close-btn" (click)="cerrarSesion()" >Cerrar Sesion</button>
+
+  </div>
+ 
+  <div class="filter-bar">
+    <div class="filter-btn active">⚙️ Frenos</div>
+    <div class="filter-btn">🔋 Baterías</div>
+    <div class="filter-btn">🚗 Motor</div>
+    <div class="filter-btn">💧 Enfriamiento</div>
+    <div class="filter-btn">💡 Eléctrico</div>
+    <div class="filter-btn">🛞 Suspensión</div>
+  </div>
+
+  <div *ngIf="productosFiltrados.length > 0; else noData" class="products">
+    <div class="product-card" *ngFor="let p of productosFiltrados">
+      <div class="product-header">{{ p.name }} - {{ p.description }}</div>
+      <div class="product-desc">Cantidad de Producto: {{ p.stock }}</div>
+
+      <div class="product-prices">
+        <div class="discount-box">
+          <div class="discount">Descuento Outlet -{{ 10 }}%</div>
+          <div class="price">${{ p.price - (p.price * 0.10) | number:'1.2-2' }}</div>
+          <div class="price-normal">Precio Normal ${{ p.price }}</div>
+        </div>
+        <div class="cash-box">
+          <div>Pronto Pago</div>
+          <div>-----</div>
+          <div class="price">${{ p.price - (p.price * 0.25) | number:'1.2-2' }}</div>
+
+        </div>
+        <div class="action-buttons">
+          <button class="update-btn" (click)="actualizarProducto(p)">Actualizar</button>
+          <button class="delete-btn" (click)="eliminarProducto(p.id)">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noData>
+    <p style="text-align:center; color:gray;">No hay productos disponibles</p>
+  </ng-template>
+
+  
+</div>
